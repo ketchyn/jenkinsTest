@@ -9,11 +9,11 @@ pipeline {
         stage('Merge with prod org'){
             steps {
                 sh 'npm install --global force-dev-tool --silent'
-                withCredentials([usernamePassword(credentialsId: 'fulltet2Creds', passwordVariable: 'SF_PASSWORD', usernameVariable: 'SF_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'SFProdTestCreds', passwordVariable: 'SF_PASSWORD', usernameVariable: 'SF_USERNAME')]) {
                     sh 'force-dev-tool remote add production ${SF_USERNAME} ${SF_PASSWORD} https://test.salesforce.com'
                 }
                 sh 'git checkout REALISE'
-                withCredentials([usernamePassword(credentialsId: 'gitMellanox-salesforce', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'ProdTestOrg', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                     sh 'git config --global user.email ${GIT_USERNAME}'
                     sh 'git config --global user.name ${GIT_USERNAME}'
                 }
