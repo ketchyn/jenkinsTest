@@ -235,6 +235,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>SLASerialNumberTest__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA Serial Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SLA__c</fullName>
         <externalId>false</externalId>
         <label>SLA</label>
