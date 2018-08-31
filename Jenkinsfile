@@ -28,7 +28,7 @@ pipeline {
                 sh 'force-dev-tool deploy -c -d config/deployments/deploy production'
             }
         }
-        stage('Running tests & dry-run deploy'){
+        stage('Deploy'){
              steps {
                 sh 'force-dev-tool deploy -d config/deployments/deploy production'
              }
