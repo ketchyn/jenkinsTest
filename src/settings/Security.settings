@@ -5,6 +5,10 @@
             <end>109.68.43.206</end>
             <start>109.68.43.206</start>
         </ipRanges>
+        <ipRanges>
+            <end>80.211.189.72</end>
+            <start>80.211.189.72</start>
+        </ipRanges>
     </networkAccess>
     <passwordPolicies>
         <complexity>AlphaNumeric</complexity>
